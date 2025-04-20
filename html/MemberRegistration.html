@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/registration.css">
+    <title>Registration</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png">
+    
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="d-f lex justify-content-center align-items-center mt-4 form-heading">
+        <h2 class="mt-5 fw-bolder text-center">REGISTRATION FORM</h2>
+    </div>
+     <!-- Member Registration Form -->
+ <form id="memberRegistrationForm">
+    <div class="parent d-flex justify-content-between">
+
+        <div class="left-side mt-5 w-25">
+
+            <div class="img-fluid" id="preview"></div>
+
+            <div class="d-flex  align-items-center">
+                <div class="form-group mt-4">
+                    <input type="file" name="upload_file" id="picture" accept="image/*" class="form-control"
+                        onchange="getImagePreview(event)">
+                </div>
+                <div class="form-group mt-4 text-center">
+                </div>
+            </div>
+            <center>
+              <button type="submit" class="mt-4 btn-lg btn-danger">Register</button>
+            </center>
+        </div> 
+        
+        <div class="right-side d-flex mt-5 w-75 ms-5 mb-5">
+          <div class="left-form w-100 mt-4">
+            <div class="d-flex mt-1 justify-content-between mx-5">
+                <label for="rfid" class="mb-0 mt-3 form-headings fw-bold">RFID:</label>
+                <input class="w-75 p-2 mt-1 form-control" type="text" id="rfid" required
+                  placeholder="Enter RFID">
+            </div>
+            <div class="d-flex mt-3 justify-content-between mx-5">    
+                <label for="name" class="mb-0 mt-3 form-headings fw-bold">Name:</label>
+                <input class="w-75 p-2 mt-1 form-control" type="text" id="name" required
+                  placeholder="Enter your name">
+            </div>      
+            <div class="d-flex mt-3 justify-content-between mx-5">
+                <label for="email" class="mb-0 mt-3 form-headings fw-bold">Email:</label>
+                <input class="w-75 p-2 mt-1 form-control" type="email" id="email" required
+                placeholder="Enter your Email">
+            </div>
+            <div class="d-flex mt-3 justify-content-between mx-5">      
+              <label for="gender" class="mb-0 mt-3 form-headings fw-bold">Gender:</label>
+              <select name="gender" id="gender" class="w-75 p-2 mt-1 form-control" required>
+                  <option value="M">M</option>
+                  <option value="F">F</option>
+              </select>
+            </div>      
+            <div class="d-flex mt-3 justify-content-between mx-5">      
+
+                <label for="medicalhistory" class="mb-0 mt-3 form-headings fw-bold">Medical History:</label>
+                <select name="medicalhistory" id="medicalhistory" class="w-75 p-2 mt-1 form-control" required>
+                    <option value="None">None</option>
+                    <option value="Diabetes">Diabetes</option>
+                    <option value="Gout">Gout</option>
+                    <option value="Hypercholesterolaemia">Hypercholesterolaemia</option>
+                    <option value="Celiac">Celiac</option>
+                </select>
+            </div>
+
+            <div class="d-flex mt-3 justify-content-between mx-5">     
+            <label for="dateOfBirth" class="mb-0 mt-3 form-headings fw-bold">Date of Birth:</label>
+            <input class="w-75 p-2 mt-1 form-control" type="date" id="dateOfBirth" required
+            placeholder="Enter your date of birth">
+              </div>
+              
+              
+            <div class="d-flex mt-3 justify-content-between mx-5">      
+                <label for="password" class="mb-0 mt-3 form-headings fw-bold">Password:</label>
+                <input class="w-75 p-2 mt-1 form-control" type="password" id="password" required
+                placeholder="Enter your Password">    
+            </div>
+            <div class="d-flex mt-3 justify-content-between mx-5 mb-4">        
+                  <label for="phoneNumber" class="mb-0 mt-3 form-headings fw-bold">Contact No:</label>
+                  <input class="w-75 p-2 mt-1 form-control ms-5" type="tel" id="phoneNumber" required
+                    placeholder="Enter your Phone">
+            </div>        
+        </div>
+  </div>
+</div>
+
+ </form>
+
+ <script src="/js/MemberRegistration.js"></script>
+</body>
+</html>

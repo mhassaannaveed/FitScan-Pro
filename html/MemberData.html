@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/show.css" />
+
+    <title>Member Profile</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  </head>
+  <body class="bg-white">
+    <div class="text-center mt-5">
+      <h3 class="text-danger">Welcome</h3>
+    </div>
+    <div class="container d-flex justify-content-end">
+      <button class="btn btn-danger mx-1" id="changePassword">
+        Change Password
+      </button>
+      <button class="btn btn-danger mx-1" id="logoutButton">Logout</button>
+    </div>
+    <div class="container mt-3 d-flex justify-content-evenly">
+      <div
+        class="left-side w-25 shadow-lg bg-light rounded border"
+      >
+        <div class="mt-2">
+          <div id="image_container" class="d-flex justify-content-center"></div>
+        </div>
+        <div class="mt-2">
+          <h4 id="member_name" class="text-center text-dark"></h4>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Reg no:</h6>
+          <p id="member_regno" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Age:</h6>
+          <p id="member_age" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Gender:</h6>
+          <p id="member_gender" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Phone:</h6>
+          <p id="member_num" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Email:</h6>
+          <p id="member_email" class="text-dark"></p>
+        </div>
+        <div class="text-center"></div>
+      </div>
+
+      <div class="ms-5 right-side w-75 rounded border ">
+        <canvas id="myChart"></canvas>
+      </div> 
+    </div>
+
+    <div class="my-5">
+      <div class="d-flex justify-content-evenly" id="data">
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center ">Medical History</h6>
+            <p id="member_medhistory" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">Fitness Level</h6>
+            <p id="member_fitlevel" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">Height</h6>
+            <p id="member_height" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">Weight</h6>
+            <p id="member_weight" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">BMI</h6>
+            <p id="member_BMI" class="text-dark text-center"></p>  
+          </div>  
+      </div>  
+    </div>
+    
+    <div class="my-5">
+      <div class="d-flex justify-content-center">
+        <button onclick="callAPI()" class="btn btn-danger mx-1" id="generateButton">
+          Generate
+        </button>
+      </div>
+      <div class="container mt-3" id="predictedValues"></div>
+    </div>
+    
+    <div class="my-5">
+      <div class="d-flex justify-content-evenly" id="data">
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center ">Diet Type</h6>
+            <p id="diet" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">Exercise</h6>
+            <p id="exercise" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">BMR</h6>
+            <p id="bmr" class="text-dark text-center"></p>
+          </div>
+          <div class="shadow-lg bg-light rounded-border px-4">
+            <h6 class="text-danger mb-0 fw-bold text-center">Daily Calories Intake</h6>
+            <p id="calories" class="text-dark text-center"></p>
+          </div>  
+      </div>  
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/all.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/MemberData.js"></script>
+  </body>
+</html>

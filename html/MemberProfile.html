@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/show.css" />
+    <title>Profile</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png" />
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  </head>
+  <body class="bg-white">
+    <div class="text-center mt-5">
+      <h3 class="text-danger">Member Profile</h3>
+    </div>
+    <!-- <div id="memberProfile">
+    </div> -->
+
+    <div class="container mt-5 d-flex justify-content-evenly">
+      <div class="left-side w-25 shadow-lg bg-light">
+        <div class="mt-2">
+          <div id="image_container" class="d-flex justify-content-center"></div>
+        </div>
+        <div class="mt-2">
+          <h4 id="member_name" class="text-center text-dark"></h4>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Reg no:</h6>
+          <p id="member_regno" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Age:</h6>
+          <p id="member_age" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Gender:</h6>
+          <p id="member_gender" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Phone:</h6>
+          <p id="member_num" class="text-dark"></p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-danger mb-0 fw-bold">Email:</h6>
+          <p id="member_email" class="text-dark"></p>
+        </div>
+        <div class="text-center"></div>
+      </div>
+
+      <div class="ms-5 right-side w-75 bg-light">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/all.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/MemberProfile.js"></script>
+  </body>
+</html>

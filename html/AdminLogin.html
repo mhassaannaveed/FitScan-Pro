@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <title>Login</title>
+  <link rel="icon" type="image/x-icon" href="../img/Logo1.png">
+
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+</head>
+<body>
+  
+  <div class="d-flex justify-content-center mt-5 mb-5 main">
+    <div class="w-50 mt-5  form-container">
+      <div class=" d-flex justify-content-center mt-5">
+        <h1 class="login-heading">Login</h1>
+      </div>
+      <div>
+        <div class="d-flex justify-content-center">
+          <form id="adminLoginForm" class="w-75">
+            <label for="email" class="mb-0 mt-4 form-headings">Email:</label>
+            <input type="email" id="email" class="w-100 p-3 mt-1 form-inputs" 
+                placeholder="Enter your Email" required>
+            <label for="password" class="mb-0 mt-4 form-headings">Password:</label>
+            <input type="password" id="password" class="w-100 p-3 mt-1 form-inputs"
+                placeholder="Enter your Password" required><br><br>
+            <div class="d-flex justify-content-center mb-5">
+              <button type="submit" class="login-btn mt-3 w-75 p-3">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="../js/all.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/AdminLogin.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/all.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/table.css" />
+    <title>Record</title>
+    <link rel="icon" type="image/x-icon" href="../img/Logo1.png" />
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-storage.js"></script>
+  </head>
+  <body class="bg-white">
+    <div class="container">
+      <div class="d-flex justify-content-center mt-5">
+        <h2 class="text-danger">MEMBERS RECORD</h2>
+      </div>
+      <table
+        class="table table-bordered text-dark border-danger mt-5">
+        <thead>
+          <tr>
+            <th scope="col" class="text-center text-danger">#</th>
+            <th scope="col" class="text-center text-danger">Reg no</th>
+            <th scope="col" class="text-center text-danger">Name</th>
+            <th scope="col" class="text-center text-danger">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="memberRecordsBody">
+          <!-- Member records will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="/js/all.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/MemberRecord.js"></script>
+  </body>
+</html>
