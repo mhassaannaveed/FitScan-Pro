@@ -1,0 +1,8 @@
+.table > :not(caption) > * > * {
+    padding: 1rem 0.5rem;
+}
+.card-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
